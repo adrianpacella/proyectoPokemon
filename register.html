@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/pikachu_icon-icons.com_67535.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Registro-Pokemaniakcs</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="menu menu-container">
+            <button class="menu-toggle" id="menu-toggle">
+                &#9776; <!-- Símbolo del menú hamburguesa -->
+            </button>
+            <ul id="nav-menu" class="ul-style oswald-text">
+                <li><img src="./img/Pokemaniaks_logo.jpg" alt="Pokemainacs"></li>
+                <li><a href="./index.html"> Inicio</a></li>
+                <li><a href=#footer> Contacto</a></li>
+            </ul>
+            <div class="box">
+                <ul class="box-der">
+                    <li><a href="./register.html" class="btn-register">Crear cuenta</a></li>
+                    <li><a href="./cesion.html" class="btn-register">Iniciar Cesion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="form-wrapper">
+            <h2>Crear Cuenta</h2>
+            <br>
+            <form action="#" id="formRegister" method="GET" novalidate>
+                <div class="form-control">
+                    <label for="firstname">Nombre</label>
+                    <input type="text" placeholder="Ej: Maria" required name="firstname" id="firstname">
+                </div>
+                <div class="error" id="error-firstname"></div>
+                <div class="form-control">
+                    <label for="lastname">Apellido</label>
+                    <input type="text" placeholder="Ej: Gonzalez" required name="lastname" id="lastname">
+                </div>
+                <div class="error" id="error-lastname"></div>
+                <div class="form-control">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" placeholder="Ej: Calle 133 n 48" required name="direccion" id="direccion">
+                </div>
+                <div class="error" id="error-direccion"></div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Ej: mimail@gmail.com" required name="email" id="email">
+                </div>
+                <div class="error" id="error-email"></div>
+                <div class="form-control">
+                    <label for="password">Contraseña</label>
+                    <input type="password" required name="password" id="password">
+                </div>
+                <div class="error" id="error-password"></div>
+
+                <!-- Nuevo campo de tipo select -->
+                <div class="form-control">
+                    <label for="interests">Intereses</label>
+                    <select name="interests" id="interests" required>
+                        <option value="" disabled selected>Seleccione un interés</option>
+                        <option value="pokemon">Pokemon</option>
+                        <option value="videojuegos">Videojuegos</option>
+                        <option value="juguetes">Juguetes</option>
+                    </select>
+                </div>
+                <div class="error" id="error-interests"></div>
+
+                <!-- Nuevo campo de tipo radio -->
+                <div class="form-control">
+                    <label>Género</label>
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">Masculino</label>
+                    <input type="radio" name="gender" id="female" value="female" required>
+                    <label for="female">Femenino</label>
+                    <input type="radio" name="gender" id="other" value="other" required>
+                    <label for="other">Otro</label>
+                </div>
+                <div class="error" id="error-gender"></div>
+
+                <!-- Campo de tipo checkbox -->
+                <div class="form-terms">
+                    <div class="terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Acepto términos y condiciones</label>
+                        <div class="error" id="error-terms"></div>
+                    </div>
+                </div>
+
+                <!-- Imagen -->
+                <div class="form-control">
+                    <label for="profile-pic">Foto de perfil</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
+                </div>
+                <div class="error" id="error-profile-pic"></div>
+
+                <br>
+                <button type="submit" id="btn-send">Registrarse</button>
+                <div class="form-help">
+                    <a href="#">¿Necesitas ayuda?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer id="footer" class="oswald-text">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Formas de Envío</h2>
+                <ul class="footer-icons">
+                    <li><img src="./img/Envios/Logo_oca.jpg" alt="OCA"></li>
+                    <li><img src="./img/Envios/mercado-libre-logo.png" alt="Mercado Libre"></li>
+                    <li><img src="./img/Envios/logo-vector_correo-argentino.jpg" alt="Correo Argentino"></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Medios de Pago</h2>
+                <img class="footer-payment" src="./img/otrosMediosDePago.jpg" alt="Medios de pago">
+            </div>
+            <div class="footer-section">
+                <h2>Contactanos</h2>
+                <ul class="footer-contact">
+                    <li><a href="tel:1155556666">11-5555-6666</a></li>
+                    <li><a href="mailto:pokemaniac@outlook.com">pokemaniac@outlook.com</a></li>
+                    <li>Av. Corrientes 444 - Buenos Aires</li>
+                </ul>
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.7595605398!2d-58.598110445119644!3d-34.61571293030001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1711999184490!5m2!1ses!2sar"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h2>Seguinos en nuestras redes</h2>
+                <ul class="footer-social">
+                    <li><a href="#"><img src="./img/Logos/icons8-facebook-nuevo-48.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./img/Logos/icons8-instagram-48.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="./img/Logos/icons8-twitter.gif" alt="Twitter"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/validation-register.js"></script>
+
+</body>
+
+
+</html>
