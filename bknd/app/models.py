@@ -56,17 +56,17 @@ class Usuario:
         return None
     
     """
-    Insertar un registro si no existe el atributo id_movie
+    Insertar un registro si no existe el atributo id_usuario
     """
     def save(self):
         db = get_db()
         cursor = db.cursor()
         if self.id_usuario:
             cursor.execute("""
-                UPDATE usuarios SET SET firstname = %s,lastname = %s,direccion = %s,email = %s,password = %s,interest = %s,gender = %s WHERE id_usuario = %s""",(self.firstname,self.lastname,self.direccion,self.email,self.password,self.interest,self.gender))
+                UPDATE usuarios SET  firstname = %s,lastname = %s,direccion = %s,email = %s,password = %s,interest = %s,gender = %s WHERE id_usuario = %s""",(self.firstname,self.lastname,self.direccion,self.email,self.password,self.interest,self.gender))
         else:
             cursor.execute("""
-                INSERT INTO usuarios firstname,lastname,direccion,email,password,interest,gender)VALUES (%s,%s,%s,%s,%s,%s,%s,)""",(self.firstname,self.lastname,self.direccion,self.email,self.password,self.interest,self.gender))
+                INSERT INTO usuarios firstname,lastname,direccion,email,password,interest,gender)VALUES (%s, %s, %s, %s, %s, %s, %s)""",(self.firstname,self.lastname,self.direccion,self.email,self.password,self.interest,self.gender))
             self.id_usuario = cursor.lastrowid
         db.commit()
         cursor.close()
