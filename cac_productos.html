@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cac_productos.css">
+    <link rel="shortcut icon" href="./img/pikachu_icon-icons.com_67535.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+<body>
+    <title>Pokemaniacs</title>
+    <main> 
+        <section id="form" class="container ">
+            <h2 class="search-title">Gestión de Productos</h2>
+            <p class="description" >En esta sección se podra llevar a cabo la gestión de Productos del portal</p>
+            <form action="#"  id="form-producto">
+                <div class="d-flex">
+                    <div class="form-control d-flex-column">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="input-search" name="nombre" id="nombre">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="categoria">Categoria</label>
+                        <input type="text" class="input-search" name="categoria" id="categoria">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="marca">Marca</label>
+                        <input type="text" class="input-search" name="marca" id="marca">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="precio">Precio</label>
+                        <input type="number" class="input-search" name="precio" id="precio">
+                    </div>
+                    
+                    <input type="hidden"  name="id" id="id-producto">
+                    <button class="btn-cac" type="button" id="btn-save-producto">Agregar</button>
+                </div>
+            </form> 
+        </section>
+        <section id="list" class="container">
+            <h3 class="subtitle">Listado de Productos</h3>
+            <table id="list-table-producto" class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoria</th>
+                        <th>Marca</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-producto">
+                    
+                </tbody>
+            </table>
+        </section>  
+    </main>
+
+</head>
+    <footer id="footer" class="oswald-text">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Formas de Envío</h2>
+                <ul class="footer-icons">
+                    <li><img src="./img/Envios/Logo_oca.jpg" alt="OCA"></li>
+                    <li><img src="./img/Envios/mercado-libre-logo.png" alt="Mercado Libre"></li>
+                    <li><img src="./img/Envios/logo-vector_correo-argentino.jpg" alt="Correo Argentino"></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Medios de Pago</h2>
+                <img class="footer-payment" src="./img/otrosMediosDePago.jpg" alt="Medios de pago">
+            </div>
+            <div class="footer-section">
+                <h2>Contactanos</h2>
+                <ul class="footer-contact">
+                    <li><a href="tel:1155556666">11-5555-6666</a></li>
+                    <li><a href="mailto:pokemaniac@outlook.com">pokemaniac@outlook.com</a></li>
+                    <li>Av. Corrientes 444 - Buenos Aires</li>
+                </ul>
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.7595605398!2d-58.598110445119644!3d-34.61571293030001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1711999184490!5m2!1ses!2sar"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h2>Seguinos en nuestras redes</h2>
+                <ul class="footer-social">
+                    <li><a href="#"><img src="./img/Logos/icons8-facebook-nuevo-48.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./img/Logos/icons8-instagram-48.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="./img/Logos/icons8-twitter.gif" alt="Twitter"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script src="index.js"></script>
+<script src="./js/productos-fetch.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

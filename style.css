@@ -108,7 +108,7 @@ header h1 {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
+    /*font-family: 'Press Start 2P', cursive;*/
     position: relative;
     padding: 0 1rem;
     /* Añade padding para evitar el desbordamiento */
@@ -675,7 +675,7 @@ ul.redes li {
         text-align: center;
     }
 }
-}
+
 
 /* Tablets (768px a 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {

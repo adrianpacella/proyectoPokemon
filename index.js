@@ -16,4 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.toggle('active');
         boxContainer.style.display = navMenu.classList.contains('active') ? 'none' : 'flex';
     });
-});
+})
+
+

@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+   
 
     <title>Registro-Pokemaniakcs</title>
 </head>
@@ -38,7 +40,7 @@
         <section class="form-wrapper">
             <h2>Crear Cuenta</h2>
             <br>
-            <form action="#" id="formRegister" method="GET" novalidate>
+            <form action="#" id="formRegister">
                 <div class="form-control">
                     <label for="firstname">Nombre</label>
                     <input type="text" placeholder="Ej: Maria" required name="firstname" id="firstname">
@@ -67,24 +69,26 @@
 
                 <!-- Nuevo campo de tipo select -->
                 <div class="form-control">
-                    <label for="interests">Intereses</label>
-                    <select name="interests" id="interests" required>
+                    <label for="interest">Intereses</label>
+                    <select name="interest" id="interest" required>
                         <option value="" disabled selected>Seleccione un interés</option>
                         <option value="pokemon">Pokemon</option>
                         <option value="videojuegos">Videojuegos</option>
                         <option value="juguetes">Juguetes</option>
                     </select>
+                   
                 </div>
+                <input type="hidden"  name="id" id="id-usuario">
                 <div class="error" id="error-interests"></div>
 
                 <!-- Nuevo campo de tipo radio -->
                 <div class="form-control">
                     <label>Género</label>
-                    <input type="radio" name="gender" id="male" value="male" required>
+                    <input type="radio" name="gender" id="gender" value="male" required>
                     <label for="male">Masculino</label>
-                    <input type="radio" name="gender" id="female" value="female" required>
+                    <input type="radio" name="gender" id="gender" value="female" required>
                     <label for="female">Femenino</label>
-                    <input type="radio" name="gender" id="other" value="other" required>
+                    <input type="radio" name="gender" id="gender" value="other" required>
                     <label for="other">Otro</label>
                 </div>
                 <div class="error" id="error-gender"></div>
@@ -98,20 +102,45 @@
                     </div>
                 </div>
 
-                <!-- Imagen -->
+                <!-- Imagen 
                 <div class="form-control">
                     <label for="profile-pic">Foto de perfil</label>
                     <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
                 </div>
                 <div class="error" id="error-profile-pic"></div>
 
-                <br>
-                <button type="submit" id="btn-send">Registrarse</button>
+                <br>-->
+                <button type="button" id="btn-send">Registrarse</button>
                 <div class="form-help">
                     <a href="#">¿Necesitas ayuda?</a>
                 </div>
             </form>
         </section>
+    <section id="list" class="container">
+        <h3 class="subtitle">Listado de usuarios</h3>
+        <table id="list-table-usuarios" class="table">
+          <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>email</th>
+                <th>Contraseña</th>
+                <th>Intereses</th>
+                <th>Genero</th>
+                <th>Acciones</th>
+            </tr>
+          </thead>  
+        
+          <tbody id="tbody-table-usuarios">
+                    
+        </tbody>
+
+        
+    </table>
+
+    </section>    
+
     </main>
 
 
@@ -155,7 +184,7 @@
     </footer>
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/validation-register.js"></script>
+    <script src="./js/usuarios-fetch.js"></script>
 
 </body>
 
